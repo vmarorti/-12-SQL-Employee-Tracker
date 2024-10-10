@@ -6,12 +6,12 @@ CREATE DATABASE employee_tracker;
 -- Uses the database --
 \c employee_tracker;
 
+-- Create the tables --
 CREATE TABLE department (
     id SERIAL PRIMARY KEY,
     dept_name VARCHAR(30) UNIQUE NOT NULL
 );
 
--- Creates the tables --
 CREATE TABLE roles (
 id SERIAL PRIMARY KEY,
 title VARCHAR(30) UNIQUE NOT NULL,
