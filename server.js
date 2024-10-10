@@ -1,7 +1,6 @@
 const express = require('express');
 const inquirer = require('inquirer');
 const { Pool } = require('pg');
-require('pg/lib/defaults');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -36,17 +35,17 @@ function run() {
         .then((response) => {
             if (response.choice === 'View all Departments') {
                 viewDepartments();
-            } else if (response.choice === 'View All Roles') {
+            } else if (response.choice === 'View all Roles') {
                 viewRoles();
-            } else if (response.choice === 'View All Employees') {
+            } else if (response.choice === 'View all Employees') {
                 viewEmployees();
-            } else if (response.choice === 'Add Department') {
+            } else if (response.choice === 'Add a Department') {
                 addDepartment();
-            } else if (response.choice === 'Add Role') {
+            } else if (response.choice === 'Add a Role') {
                 addRole();
             } else if (response.choice === 'Update Employee Role') {
                 updateRole();
-            } else if (response.choice === 'Add Employee') {
+            } else if (response.choice === 'Add an Employee') {
                 addEmployee();
             }
         })
